@@ -1,0 +1,9 @@
+applications:
+- name: tomasz-web
+  path: target/tomasz-web-0.0.1-SNAPSHOT.jar
+  memory: 750M
+  instances: 1
+  buildpack: java_buildpack
+  stack: cflinuxfs2
+  env:
+    JBP_CONFIG_OPEN_JDK_JRE: "{ memory_calculator: { stack_threads: 100 } }"
